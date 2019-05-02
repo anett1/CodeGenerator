@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        section{
+            max-width: 600px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: #EBE3CB;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            display: block;
+            width: 100%;
+            padding: 10px 30px;
+            background-color: #A0AA8F;
+            color: #46483C;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            border: none;
+            transition: .3s;
+        }
+        button:hover{
+            background-color:#46483C;
+            outline: none;
+            color: #A0AA8F;
+            cursor: pointer;
+        }
+        button:focus-within{
+            outline: none;
+        }
+
+        div.code{
+            border-top: 10px solid  rgb(255, 255, 255);
+            padding: 10px 100px 0 100px;
+            color: #46483C;
+            text-align: center;
+        }
+
+       form.date{
+        padding: 20px 20px;
+        border-bottom: 10px solid  rgb(255, 255, 255);
+        color: #46483C;
+        font-size: 1rem;
+        }
+
+        form.date input{
+            display: block;
+            width: 100%;
+            padding: 5px 5px;
+        }
+        form.date input:focus{
+            outline: none;
+        }
+
+        form.date input:nth-child(1),
+        form.date input:nth-child(2){
+            margin-bottom: 5px;
+        }
+        .borderEmptyInput{
+            border: 2px solid #46483C;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form class="date">
+            <input id="chars" type="text" placeholder="Characters in the code">
+            <input id="codesNumber" type="text" placeholder="Number of codes">
+            <input id="charsNumber" type="text" placeholder="Number of characters in the code">
+        </form>
+        <button>random code</button>
+        <div class="code"></div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
